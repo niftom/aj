@@ -1,0 +1,14 @@
+---
+- name: install python package
+  hosts: all
+  tasks:
+  - name: install python3-PyMySQL
+    dnf:
+      name: python3-PyMySQL
+      state: latest
+
+  - name: add user name
+    user:
+      name: wish
+      state: present
+
